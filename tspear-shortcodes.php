@@ -12,3 +12,16 @@
  */
 
 
+function ts_lorem_function(){ ?>
+<p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.</p>
+<?php }
+
+add_shortcode('lorem', 'ts_lorem_function');
+
+
+function ts_responsive_gallery(){
+	$imgurl = "thumb.png";
+	$markup = sprintf("<img src=%s class='img-responsive'>", $imgurl);	
+	echo $markup;
+};
+add_shortcode('tsgallery', 'ts_responsive_gallery');
