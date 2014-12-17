@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"lorem",
+				"lorem_function"
+			],
+			[
 				"port",
 				"portfolio-entry-title"
 			],
@@ -119,23 +123,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "tspear-shortcodes.php",
-			"settings":
-			{
-				"buffer_size": 257,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "readme.txt",
-			"settings":
-			{
-				"buffer_size": 52,
-				"line_ending": "Unix",
-				"name": "wordpress.org/extend/plugins/about/readme or summa"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -219,9 +206,14 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/plugins/tspear-shortcodes"
+	],
 	"file_history":
 	[
 		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/plugins/tspear-shortcodes/tspear-shortcodes.php",
+		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/plugins/tspear-shortcodes/readme.txt",
 		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/themes/tspear/sass/style.scss",
 		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/themes/tspear/archive.php",
 		"/Users/tim/Dropbox/Work/sitedev/tspear.com/wp-content/themes/tspear/single-jetpack-portfolio.php",
@@ -439,66 +431,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "tspear-shortcodes.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 257,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								257,
-								257
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "readme.txt",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 52,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"auto_name": "wordpress.org/extend/plugins/about/readme or summa",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -663,7 +597,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 249.0,
+	"side_bar_width": 206.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
