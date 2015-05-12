@@ -39,7 +39,7 @@ add_shortcode('tsgallery', 'ts_responsive_gallery');
 
 function ts_bs3_gallery($attr){
 
-	$imglist = get_post_gallery_images();
+	$imglist = explode(',', $attr['ids']);
 	
 	if (count($imglist) > 0) {
 		$output ='';
