@@ -45,7 +45,7 @@ function ts_bs3_gallery($attr){
 		$output ='';
 		foreach ($imglist as $value) {
 			$url = wp_get_attachment_image_src($value,'full');
-			$output.= '<div class="col-lg-3"><img src="'.$url[0].'" class="img-responsive"></div>';
+			$output.= '<div class="col-lg-6"><img src="'.$url[0].'" class="img-responsive"></div>';
 		}
 	}
 	
