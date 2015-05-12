@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Plugin Name: Tim's Shortcodes
  * Plugin URI: http://tspear.com/blog/tspear-shortcodes
@@ -12,16 +11,44 @@
  */
 
 
-function ts_lorem_function(){ ?>
-<p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.</p>
-<?php }
+function ts_lorem_function(){ 
+	return '<p>lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.lorem ipsum dolor sit amet. lorem ipsum dolor sit amet. lorem ipsum dolor sit amet.</p>';
+};
+add_shortcode('tslorem', 'ts_lorem_function');
 
-add_shortcode('lorem', 'ts_lorem_function');
+
+function ts_responsive_gallery($attr){
+
+	// get_post_gallery_images
 
 
-function ts_responsive_gallery(){
-	$imgurl = "thumb.png";
-	$markup = sprintf("<img src=%s class='img-responsive'>", $imgurl);	
-	echo $markup;
+	$img_ids_array = explode(',', $attr['ids']);
+
+	$imgattrs = array('class' => 'img-responsive');
+	
+	$image_output = '';
+	foreach ($img_ids_array as $value) {
+		$image_output .= wp_get_attachment_image($value, $size, false, $imgattrs);
+	}
+
+	return $image_output;
 };
 add_shortcode('tsgallery', 'ts_responsive_gallery');
+
+
+
+function ts_bs3_gallery($attr){
+
+	$imglist = get_post_gallery_images();
+	
+	if (count($imglist) > 0) {
+		$output ='';
+		foreach ($imglist as $url) {
+			$output.= '<div class="col-lg-3"><img src="'.$url.'" class="img-responsive"></div>';
+		}
+	}
+	
+	return $output;
+};
+add_shortcode('tsbs3gallery', 'ts_bs3_gallery');
+
