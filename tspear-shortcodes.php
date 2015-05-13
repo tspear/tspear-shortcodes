@@ -17,36 +17,21 @@ function ts_lorem_function(){
 add_shortcode('tslorem', 'ts_lorem_function');
 
 
-function ts_responsive_gallery($attr){
-
-	// get_post_gallery_images
-
-
-	$img_ids_array = explode(',', $attr['ids']);
-
-	$imgattrs = array('class' => 'img-responsive');
-	
-	$image_output = '';
-	foreach ($img_ids_array as $value) {
-		$image_output .= wp_get_attachment_image($value, $size, false, $imgattrs);
-	}
-
-	return $image_output;
-};
-add_shortcode('tsgallery', 'ts_responsive_gallery');
-
-
-
 function ts_bs3_gallery($attr){
 
 	$imglist = explode(',', $attr['ids']);
 	
 	if (count($imglist) > 0) {
-		$output ='';
+		// wrapper div
+		$output ='<div class="tsbs3gallery">';
+		$output .='<div class="row">';
 		foreach ($imglist as $value) {
 			$url = wp_get_attachment_image_src($value,'full');
 			$output.= '<div class="col-lg-6"><img src="'.$url[0].'" class="img-responsive"></div>';
 		}
+		// close wrappers
+		$output .='</div>';
+		$output .='</div>';
 	}
 	
 	return $output;
